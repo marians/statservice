@@ -27,18 +27,36 @@ Example:
 
 Requires Python 2.6 or higher. Not tested with Python 3.*
 
-## Installation
+## Installation / Quick start
+
+1. Set up your python environment
 
     virtualenv venv
     source venv/bin/activate
-    pip install numpy
-    pip install scipy
-    pip install Flask
+    pip install -r requirements.txt
 
-## Use
+
+2. For development purposes, start the server like so:
 
     cd webapp
     python app.py
+
+For actual production hosting, set up gunicorn and supervisor instead.
+
+3. Setting up gunicorn
+
+Copy the distributed config file to gunicorn.conf and change paths
+according to your desires.
+
+Test your configuriation like so:
+	
+	cd webapp
+    gunicorn -c ../gunicorn.conf app:app
+
+4. Set up supervisor
+
+Copy the distributed config file to /etc/supervisor/conf.d/statserve.conf (or where ever your supervisor configs are) and change paths according to match your needs.
+
 
 ## Kudos
 
