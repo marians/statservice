@@ -5,11 +5,23 @@ statservice
 
 Think of it as a webservice wrapper for some SciPy functions.
 
-This is in avery early phase and currently aims to provide only one function:
+This is in avery early phase and currently aims to provide the following functions:
 
-## Spearman's correlation
+### scipy.stats.linregress
 
-The correlation coefficient for two ranked value sets.
+Calculate the linear regression for value sets
+
+Example:
+
+    /api/linregress?a=1.1,2.1,3,4&b=4,2,8.0,9.4234&callback=jo
+
+### scipy.stats.spearmanr
+
+Calculate the Spearman correlation coefficient for two ranked value sets.
+
+Example:
+
+    /api/spearmanr?a=1.1,2.1,3,4&b=4,2,8.0,9.4234&callback=jo
 
 ## Requirements
 
