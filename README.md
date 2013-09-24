@@ -39,3 +39,8 @@ Requires Python 2.6 or higher. Not tested with Python 3.*
 
     cd webapp
     python app.py
+
+## Kudos
+
+* [SciPy](http://www.scipy.org/)
+* [Flask](http://flask.pocoo.org/)
