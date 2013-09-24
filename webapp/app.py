@@ -93,6 +93,7 @@ def stats_linregress():
     if callback != '':
         output = '%s(%s)' % (callback, output)
     resp = make_response(output, 200)
+    resp.headers['Access-Control-Allow-Origin'] = '*'
     resp.headers['Content-type'] = 'application/json'
     resp.headers['Expires'] = expires_date(hours=(24 * 30))
     return resp
@@ -142,6 +143,7 @@ def stats_spearmanr():
     if callback != '':
         output = '%s(%s)' % (callback, output)
     resp = make_response(output, 200)
+    resp.headers['Access-Control-Allow-Origin'] = '*'
     resp.headers['Content-type'] = 'application/json'
     resp.headers['Expires'] = expires_date(hours=(24 * 30))
     return resp
