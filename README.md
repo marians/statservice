@@ -5,6 +5,10 @@ statservice
 
 Think of it as a webservice wrapper for some SciPy functions.
 
+**CAUTION: This is working only in theory. In practice, Cross-origin resource sharing is
+still a problem, plus largr arrays of data can't be transmitted via URLs but should
+be sent via POST requests (which aren't handled yet).**
+
 This is in avery early phase and currently aims to provide the following functions:
 
 ### scipy.stats.linregress
